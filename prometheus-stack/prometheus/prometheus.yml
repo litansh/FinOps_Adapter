@@ -1,0 +1,9 @@
+global:
+  scrape_interval: 5s
+  external_labels:
+    monitor: 'codelab-monitor'
+
+scrape_configs:
+  - job_name: 'hello-app'
+    static_configs:
+      - targets: ['hello-app:8001']
